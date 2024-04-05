@@ -1,0 +1,99 @@
+﻿@model PaginationSearchInput
+@{
+    ViewBag.Title = "Quản lý Mặt hàng";
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <!-- Form nhập đầu vào tìm kiếm -->
+        <form id="formSearch" action="~/Product/Search" method="get" data-container="#searchResult">
+            <div class="row">
+                <div class="col-sm-3">
+                    <select class="form-control" name="category">
+                        <option>--Loại Hàng--</option>
+                        @foreach (var item in SV20T1020025.BusinessLayers.CommonDataService.ListOfCategories(out int rowCount))
+                        {
+                            if (item.CategoryName == Model.SearchValue)
+                            {
+                                <option value="@item.CategoryName" selected>@item.CategoryName</option>
+                            }
+                            else
+                            {
+                                <option value="@item.CategoryName">@item.CategoryName</option>
+                            }
+
+                        }
+                    </select>
+
+                </div>
+
+                <div class="col-sm-3" style="margin-left: -15px;">
+                    <select class="form-control" name="supplier">
+                        <option>--Nhà Cung Cấp--</option>
+                        @foreach (var item in SV20T1020025.BusinessLayers.CommonDataService.ListOfSuppliers(out int rowCount))
+                        {
+                            if (item.SupplierName == Model.SearchValue)
+                            {
+                                <option value="@item.SupplierName" selected>@item.SupplierName</option>
+                            }
+                            else
+                            {
+                                <option value="@item.SupplierName">@item.SupplierName</option>
+                            }
+
+                        }
+                    </select>
+                </div>
+
+                <div class="col-sm-6 input-group" style="margin-left: -15px;">
+                    <input type="hidden" name="PageSize" value="@Model.PageSize" />
+                    <input name="SearchValue" type="text" class="form-control" placeholder="Nhập tên mặt hàng cần tìm" value="@Model.SearchValue" autofocus>
+                    <div class="input-group-btn">
+                        <button class="btn btn-info" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                        <a href="~/Product/Create" class="btn btn-primary" style="margin-left:5px">
+                            <i class="fa fa-plus"></i> Bổ sung
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Hiển thị kết quả tìm kiếm-->
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function (e) {
+            $("#formSearch").submit(function (e) {
+                e.preventDefault();
+                doSearch(this, 1);
+                return false;
+            });
+            doSearch("#formSearch", @Model.Page);
+        });
+
+        function doSearch(formSearch, page) {
+            var action = $(formSearch).prop("action");
+            var method = $(formSearch).prop("method");
+            var container = $(formSearch).data("container");
+
+            var searchData = $(formSearch).serializeArray();
+            searchData.push({ "name": "Page", "value": page });
+            $.ajax({
+                url: action,
+                type: method,
+                data: searchData,
+                error: function () {
+                    alert("Your request is not valid!");
+                },
+                success: function (data) {
+                    $(container).html(data);
+                }
+            });
+        }
+    </script>
+}

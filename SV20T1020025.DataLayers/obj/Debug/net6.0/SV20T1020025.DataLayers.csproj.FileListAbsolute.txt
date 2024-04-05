@@ -1,0 +1,15 @@
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\bin\Debug\net6.0\SV20T1020025.DataLayers.deps.json
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\bin\Debug\net6.0\SV20T1020025.DataLayers.dll
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\bin\Debug\net6.0\SV20T1020025.DataLayers.pdb
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.csproj.AssemblyReference.cache
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.GeneratedMSBuildEditorConfig.editorconfig
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.AssemblyInfoInputs.cache
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.AssemblyInfo.cs
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.csproj.CoreCompileInputs.cache
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.dll
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\refint\SV20T1020025.DataLayers.dll
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.pdb
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\ref\SV20T1020025.DataLayers.dll
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\bin\Debug\net6.0\SV20T1020025.DomainModels.dll
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\bin\Debug\net6.0\SV20T1020025.DomainModels.pdb
+D:\DH\LapTrinhWeb\SV20T1020025\SV20T1020025.DataLayers\obj\Debug\net6.0\SV20T1020025.DataLayers.csproj.CopyComplete
